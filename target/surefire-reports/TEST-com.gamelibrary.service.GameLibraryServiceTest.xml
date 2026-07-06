@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gamelibrary.service.GameLibraryServiceTest" time="0.442" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="26"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.9.16/libexec/boot/plexus-classworlds-2.11.0.jar"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Europe/Rome"/>
+    <property name="maven.conf" value="/opt/homebrew/Cellar/maven/3.9.16/libexec/conf"/>
+    <property name="java.vm.specification.version" value="26"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/26.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="guice_custom_class_loading" value="CHILD"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.9.16/libexec"/>
+    <property name="surefire.test.class.path" value="/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/target/test-classes:/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/target/classes:/Users/martinomarrosu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/martinomarrosu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/martinomarrosu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/martinomarrosu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/martinomarrosu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/martinomarrosu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/martinomarrosu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/martinomarrosu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/martinomarrosu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/martinomarrosu/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/martinomarrosu/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/martinomarrosu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/martinomarrosu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/martinomarrosu/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/martinomarrosu/.m2/repository/org/assertj/assertj-core/3.26.3/assertj-core-3.26.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/martinomarrosu"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/26.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="Launcher"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="26.0.1"/>
+    <property name="user.name" value="martinomarrosu"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.5.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/martinomarrosu/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/gr/0y02gz_n6w56fq2tncczbnzr0000gn/T/"/>
+    <property name="java.version" value="26.0.1"/>
+    <property name="user.dir" value="/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/martinomarrosu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="26.0.1"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.9.16/libexec/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="library.jansi.path" value="/opt/homebrew/Cellar/maven/3.9.16/libexec/lib/jansi-native"/>
+    <property name="java.class.version" value="70.0"/>
+  </properties>
+  <testcase name="aggiungiGiocoValido" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.407">
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/martinomarrosu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Tentativo di creazione gioco: titolo='Dark Souls', piattaforma=PlayStation, genere=RPG, anno=2011, voto=10
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Gioco creato con successo: Dark Souls (ID: 153175b2-83a1-4071-a19e-61db9261ea4e)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService aggiungiGioco
+INFORMAZIONI: Gioco aggiunto alla libreria: 'Dark Souls' (ID: 153175b2-83a1-4071-a19e-61db9261ea4e)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService salvaAsync
+INFORMAZIONI: Salvataggio in corso ...
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService lambda$salvaAsync$0
+INFORMAZIONI: Libreria salvata (async): 1 giochi.
+]]></system-err>
+  </testcase>
+  <testcase name="carica_popolaLaLibreriaConIDatiDellaPersistenza" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.003">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService carica
+INFORMAZIONI: Libreria caricata: 1 giochi.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+]]></system-err>
+  </testcase>
+  <testcase name="annullaUltimaModificaVuoto" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.001">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+]]></system-err>
+  </testcase>
+  <testcase name="aggiungiGiocoTitoloNull" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.001">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Tentativo di creazione gioco: titolo='null', piattaforma=Steam, genere=Azione, anno=2020, voto=8
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+AVVERTENZA: Creazione gioco fallita per 'null': Il titolo non può essere nullo o vuoto.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService aggiungiGioco
+AVVERTENZA: Creazione gioco fallita: Impossibile creare il gioco 'null': Il titolo non può essere nullo o vuoto.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+]]></system-err>
+  </testcase>
+  <testcase name="cercaPerIdInesistente" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.001">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+]]></system-err>
+  </testcase>
+  <testcase name="aggiungiGioco_conPersistenzaException_nonInterrompeApplicazione" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.004">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Tentativo di creazione gioco: titolo='Metroid', piattaforma=Nintendo, genere=Azione, anno=1986, voto=9
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Gioco creato con successo: Metroid (ID: 3d65bb21-c68f-40f5-927f-71b3780afc19)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService aggiungiGioco
+INFORMAZIONI: Gioco aggiunto alla libreria: 'Metroid' (ID: 3d65bb21-c68f-40f5-927f-71b3780afc19)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService salvaAsync
+INFORMAZIONI: Salvataggio in corso ...
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService lambda$salvaAsync$0
+GRAVE: Errore di salvataggio asincrono: Errore simulato di I/O
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+]]></system-err>
+  </testcase>
+  <testcase name="aggiungiGioco_chiamaSalvaInModoAsincrono" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.002">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Tentativo di creazione gioco: titolo='Mario', piattaforma=Nintendo, genere=Platform, anno=1985, voto=10
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Gioco creato con successo: Mario (ID: 289f43bf-21b8-4464-9c9f-87bb77c0a1e9)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService aggiungiGioco
+INFORMAZIONI: Gioco aggiunto alla libreria: 'Mario' (ID: 289f43bf-21b8-4464-9c9f-87bb77c0a1e9)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService salvaAsync
+INFORMAZIONI: Salvataggio in corso ...
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService lambda$salvaAsync$0
+INFORMAZIONI: Libreria salvata (async): 1 giochi.
+]]></system-err>
+  </testcase>
+  <testcase name="rimuoviGiocoEsistente" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.003">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Tentativo di creazione gioco: titolo='Hollow Knight', piattaforma=Steam, genere=Platform, anno=2017, voto=9
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Gioco creato con successo: Hollow Knight (ID: 2bdd065b-2671-462c-9cca-94b0da3d4557)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService aggiungiGioco
+INFORMAZIONI: Gioco aggiunto alla libreria: 'Hollow Knight' (ID: 2bdd065b-2671-462c-9cca-94b0da3d4557)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService salvaAsync
+INFORMAZIONI: Salvataggio in corso ...
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService lambda$salvaAsync$0
+INFORMAZIONI: Libreria salvata (async): 0 giochi.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService rimuoviGioco
+INFORMAZIONI: Gioco rimosso dalla libreria: 'Hollow Knight' (ID: 2bdd065b-2671-462c-9cca-94b0da3d4557)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService salvaAsync
+INFORMAZIONI: Salvataggio in corso ...
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService lambda$salvaAsync$0
+INFORMAZIONI: Libreria salvata (async): 0 giochi.
+]]></system-err>
+  </testcase>
+  <testcase name="rimuoviGiocoInesistente" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.001">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+]]></system-err>
+  </testcase>
+  <testcase name="cercaPerIdEsistente" classname="com.gamelibrary.service.GameLibraryServiceTest" time="0.002">
+    <system-err><![CDATA[giu 29, 2026 11:43:46 PM com.gamelibrary.memento.CaretakerStorico <init>
+INFORMAZIONI: CaretakerStorico inizializzato con limite massimo: 10
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService <init>
+INFORMAZIONI: GameLibraryService inizializzato.
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Tentativo di creazione gioco: titolo='Elden Ring', piattaforma=PlayStation, genere=RPG, anno=2022, voto=9
+giu 29, 2026 11:43:46 PM com.gamelibrary.factory.GameFactory crea
+INFORMAZIONI: Gioco creato con successo: Elden Ring (ID: 441dbe73-0d2b-410d-a883-f32d132af479)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService aggiungiGioco
+INFORMAZIONI: Gioco aggiunto alla libreria: 'Elden Ring' (ID: 441dbe73-0d2b-410d-a883-f32d132af479)
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService salvaAsync
+INFORMAZIONI: Salvataggio in corso ...
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService shutdown
+INFORMAZIONI: ExecutorService chiuso.
+giu 29, 2026 11:43:46 PM com.gamelibrary.service.GameLibraryService lambda$salvaAsync$0
+INFORMAZIONI: Libreria salvata (async): 1 giochi.
+]]></system-err>
+  </testcase>
+</testsuite>

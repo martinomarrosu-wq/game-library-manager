@@ -1,0 +1,5 @@
+com/gamelibrary/memento/MementoTest.class
+com/gamelibrary/factory/GameFactoryTest.class
+com/gamelibrary/composite/CompositeTest.class
+com/gamelibrary/service/GameLibraryServiceTest.class
+com/gamelibrary/iterator/GameIteratorTest.class
