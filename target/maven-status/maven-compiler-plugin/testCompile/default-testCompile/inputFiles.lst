@@ -1,5 +1,7 @@
+/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/AppContextTest.java
 /Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/composite/CompositeTest.java
 /Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/factory/GameFactoryTest.java
 /Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/iterator/GameIteratorTest.java
 /Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/memento/MementoTest.java
+/Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/persistence/JsonPersistenzaTest.java
 /Users/martinomarrosu/Desktop/Game_library_manager/game-library-manager/src/test/java/com/gamelibrary/service/GameLibraryServiceTest.java

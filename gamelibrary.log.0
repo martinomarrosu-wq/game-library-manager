@@ -1,0 +1,13 @@
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.Main main â Avvio Game Library Manager...
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.AppContext <init> â Inizializzazione del contesto dell'applicazione (IoC)...
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.persistence.JsonPersistenza <init> â JsonPersistenza inizializzata con percorso esplicito: /Users/martinomarrosu/Desktop/Game_library_manager/library.json
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.memento.CaretakerStorico <init> â CaretakerStorico inizializzato con limite massimo: 10
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.service.GameLibraryService <init> â GameLibraryService inizializzato.
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.observer.GestoreNotifiche <init> â GestoreNotifiche inizializzato.
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.service.GameLibraryService registraOsservatore â Osservatore registrato. Totale osservatori: 1
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.annotations.AnnotationProcessor analizzaOperazioni â --- Avvio analisi Reflection su GameLibraryService ---
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.annotations.AnnotationProcessor analizzaOperazioni â Trovata operazione tracciata: aggiungiGioco() -> 'Creazione e inserimento di un nuovo gioco nella libreria'
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.annotations.AnnotationProcessor analizzaOperazioni â Trovata operazione tracciata: modificaGioco() -> 'Modifica dei campi di un gioco esistente'
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.annotations.AnnotationProcessor analizzaOperazioni â Trovata operazione tracciata: rimuoviGioco() -> 'Rimozione di un gioco dalla libreria'
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.annotations.AnnotationProcessor analizzaOperazioni â --- Analisi completata. Trovate 3 operazioni in GameLibraryService ---
+[2026-07-24 14:57:12] [INFO   ] com.gamelibrary.AppContext <init> â Contesto dell'applicazione inizializzato con successo.

@@ -18,11 +18,15 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
- * Implementazione della persistenza su file system tramite formato JSON (libreria Gson).
- * Si è optato per Gson in quanto offre un mapping automatico con gli enumerati e richiede minor
+ * Implementazione della persistenza su file system tramite formato JSON
+ * (libreria Gson).
+ * Si è optato per Gson in quanto offre un mapping automatico con gli enumerati
+ * e richiede minor
  * configurazione rispetto ad alternative come Jackson.
- * Il path del file di destinazione viene risolto dinamicamente leggendo un file di properties,
- * evitando l'hardcoding. L'output viene inoltre formattato (pretty printing) per favorirne
+ * Il path del file di destinazione viene risolto dinamicamente leggendo un file
+ * di properties,
+ * evitando l'hardcoding. L'output viene inoltre formattato (pretty printing)
+ * per favorirne
  * l'ispezionabilità manuale.
  *
  * @author Martino Marrosu
@@ -49,8 +53,10 @@ public class JsonPersistenza implements Persistenza {
     }.getType();
 
     /**
-     * Costruttore di default. Si occupa di inizializzare l'istanza tentando il caricamento
-     * del path target dal file di configurazione `config.properties`, applicando un percorso
+     * Costruttore di default. Si occupa di inizializzare l'istanza tentando il
+     * caricamento
+     * del path target dal file di configurazione `config.properties`, applicando un
+     * percorso
      * di fallback in caso di assenza.
      */
     public JsonPersistenza() {
@@ -61,7 +67,8 @@ public class JsonPersistenza implements Persistenza {
 
     /**
      * Costruttore esplicito per l'iniezione del path di destinazione.
-     * Introdotto per favorire il testing isolato, evitando di inquinare il file di persistenza dell'applicazione.
+     * Introdotto per favorire il testing isolato, evitando di inquinare il file di
+     * persistenza dell'applicazione.
      *
      * @param percorsoFile il percorso su cui scrivere/leggere il JSON
      */
@@ -69,14 +76,16 @@ public class JsonPersistenza implements Persistenza {
         if (percorsoFile == null || percorsoFile.isBlank()) {
             throw new IllegalArgumentException("Il percorso del file non può essere nullo o vuoto.");
         }
-        this.percorsoFile = percorsoFile;
+        this.percorsoFile = risolviPercorso(percorsoFile).toString();
         this.gson = creaGson();
         LOGGER.info(() -> String.format("JsonPersistenza inizializzata con percorso esplicito: %s", percorsoFile));
     }
 
     /**
-     * Esegue la serializzazione della collezione in memoria sovrascrivendo il file JSON.
-     * Verifica l'esistenza della directory padre e procede alla sua eventuale creazione.
+     * Esegue la serializzazione della collezione in memoria sovrascrivendo il file
+     * JSON.
+     * Verifica l'esistenza della directory padre e procede alla sua eventuale
+     * creazione.
      *
      * @param giochi la collezione di istanze da persistere
      * @throws PersistenzaException qualora intercorrano errori di I/O
@@ -118,22 +127,26 @@ public class JsonPersistenza implements Persistenza {
     }
 
     /**
-     * Provvede alla lettura e deserializzazione del file JSON, ricostituendo gli oggetti Game in memoria.
-     * Prevede la gestione formale del "primo avvio", creando un file vuoto se non preesistente.
-     * Ogni oggetto deserializzato viene processato attraverso il Builder nativo per assicurare l'integrità
+     * Provvede alla lettura e deserializzazione del file JSON, ricostituendo gli
+     * oggetti Game in memoria.
+     * Prevede la gestione formale del "primo avvio", creando un file vuoto se non
+     * preesistente.
+     * Ogni oggetto deserializzato viene processato attraverso il Builder nativo per
+     * assicurare l'integrità
      * delle regole di business prima della sua ammissione in memoria.
      *
      * @return l'elenco dei giochi correttamente processati e validati
-     * @throws PersistenzaException in presenza di JSON malformati o errori di accesso al file system
+     * @throws PersistenzaException in presenza di JSON malformati o errori di
+     *                              accesso al file system
      */
     @Override
     public List<Game> carica() throws PersistenzaException {
-        Path path = Path.of(percorsoFile);
+        Path path = risolviPercorso(percorsoFile);
 
         // Primo avvio: file non esiste — restituisci lista vuota
         if (!Files.exists(path)) {
             LOGGER.info(() -> String.format("File %s non trovato — primo avvio, creazione libreria vuota.",
-                    percorsoFile));
+                    path));
             // Crea il file con un array vuoto per le esecuzioni successive
             try {
                 salva(new ArrayList<>());
@@ -206,8 +219,10 @@ public class JsonPersistenza implements Persistenza {
     // Metodi privati di supporto
 
     /**
-     * Tenta il parsing del file di properties per dedurre il parametro relativo al file di salvataggio.
-     * Applica un meccanismo di fallback in caso di eccezione per garantire la tolleranza ai guasti (Fault Tolerance).
+     * Tenta il parsing del file di properties per dedurre il parametro relativo al
+     * file di salvataggio.
+     * Applica un meccanismo di fallback in caso di eccezione per garantire la
+     * tolleranza ai guasti (Fault Tolerance).
      *
      * @return il percorso determinato
      */
@@ -226,7 +241,7 @@ public class JsonPersistenza implements Persistenza {
                 LOGGER.warning("Percorso file vuoto in config.properties — uso default.");
                 return PERCORSO_DEFAULT;
             }
-            return percorso.trim();
+            return risolviPercorso(percorso.trim()).toString();
 
         } catch (IOException e) {
             LOGGER.warning(() -> String.format("Errore lettura config.properties: %s — uso default.",
@@ -235,8 +250,37 @@ public class JsonPersistenza implements Persistenza {
         }
     }
 
+    private Path risolviPercorso(String percorso) {
+        if (percorso == null || percorso.isBlank()) {
+            return Path.of(PERCORSO_DEFAULT);
+        }
+
+        Path path = Path.of(percorso);
+        if (path.isAbsolute()) {
+            return path.normalize();
+        }
+
+        Path workingDir = Path.of(System.getProperty("user.dir", ".")).toAbsolutePath().normalize();
+        Path resolved = workingDir.resolve(path).normalize();
+
+        if (Files.exists(resolved)) {
+            return resolved;
+        }
+
+        Path parent = workingDir.getParent();
+        if (parent != null) {
+            Path fallback = parent.resolve(path).normalize();
+            if (Files.exists(fallback)) {
+                return fallback;
+            }
+        }
+
+        return resolved;
+    }
+
     /**
-     * Configura e istanzia il motore di serializzazione Gson secondo i requisiti del progetto.
+     * Configura e istanzia il motore di serializzazione Gson secondo i requisiti
+     * del progetto.
      *
      * @return l'istanza di Gson configurata
      */
